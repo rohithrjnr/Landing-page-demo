@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="section-wrap footer-main">
+    <a class="wordmark wordmark-footer" routerLink="/" aria-label="Northline home">
+      <span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>{{ siteName.toUpperCase() }}<span class="wordmark-period">.</span></span>
+    </a>
+    <p>Clear thinking.<br>Better work.</p>
+    <div class="footer-links">
+      <a [href]="'mailto:' + email">Email us <span aria-hidden="true">↗</span></a>
+      <a routerLink="/contact">Contact</a>
+      <a routerLink="/services">Services</a>
+    </div>
+  </div>
+  <div class="section-wrap footer-bottom">
+    <span>© {{ year }} {{ siteName }} Studio. All rights reserved.</span>
+    <span>Independent by nature. Forward by design.</span>
+    <a href="#main">Back to top ↑</a>
+  </div>
+</footer>

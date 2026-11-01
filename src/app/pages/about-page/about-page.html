@@ -1,0 +1,30 @@
+<main id="main">
+  <section class="page-hero section-wrap">
+    <app-eyebrow label="02 / About Northline"></app-eyebrow>
+    <div class="page-hero-grid"><h1>We believe<br>better is <em>built.</em></h1><p class="page-hero-note">A small, senior team with a practical point of view and a genuine interest in what comes next.</p></div>
+    <div class="page-hero-band"><span>Independent by nature</span><span class="band-rule"></span><span>Collaborative by design</span></div>
+  </section>
+
+  <section class="story-section section-wrap section-pad">
+    <div class="story-aside"><app-eyebrow label="Our story"></app-eyebrow><span class="big-index">01<br><small>WHY WE'RE HERE</small></span></div>
+    <div class="story-copy"><h2>Less noise.<br><em>More progress.</em></h2><p class="lead">Northline started with a simple observation: good teams don't need more noise. They need a clear view of the challenge and a partner who can help them move.</p><p>We bring strategy, design, and delivery into the same conversation. That means fewer handoffs, sharper decisions, and work that connects the idea on the page to the reality on the ground. Our size lets us stay close. Our curiosity keeps us asking better questions.</p><p>Today, we work alongside ambitious organizations as they shape what comes next—one considered decision at a time.</p></div>
+  </section>
+
+  <section class="mission-section">
+    <div class="section-wrap mission-layout"><div><app-eyebrow label="Our mission" [light]="true"></app-eyebrow><span class="mission-aside">A clear<br>point of view.</span></div><div><h2>Make complexity<br><em>useful.</em></h2><p>We turn uncertainty into direction and direction into meaningful change. Our work should leave people with more clarity, more capability, and a better sense of what to do next.</p></div></div>
+  </section>
+
+  <section class="values-section section-wrap section-pad">
+    <app-section-heading eyebrow="What guides us">
+      <h2 heading-title>Principles with<br><em>purpose.</em></h2>
+      <p heading-aside class="heading-aside">A few things we come back to, whatever the brief.</p>
+    </app-section-heading>
+    <div class="values-list">
+      @for (value of values; track value.number) {
+        <article class="value-row"><span class="service-number">{{ value.number }}</span><h3>{{ value.title }}</h3><p>{{ value.description }}</p><span class="value-glyph" aria-hidden="true">↗</span></article>
+      }
+    </div>
+  </section>
+
+  <app-cta-band firstLine="Thoughtful work starts" secondLine="with a good conversation."></app-cta-band>
+</main>

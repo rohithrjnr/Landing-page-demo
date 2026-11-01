@@ -1,0 +1,43 @@
+<main id="main">
+  <section class="page-hero services-page-hero section-wrap">
+    <app-eyebrow label="03 / Our services"></app-eyebrow>
+    <div class="page-hero-grid"><h1>Think it<br>through.<br><em>Make it real.</em></h1><p class="page-hero-note">We bring the right mix of perspective and practice to move your business forward.</p></div>
+    <div class="page-hero-band"><span>One connected team</span><span class="band-rule"></span><span>From clarity to launch</span></div>
+  </section>
+
+  <section class="services-detail section-pad">
+    <div class="section-wrap">
+      @for (service of services; track service.id) {
+        <article class="service-detail-row" [id]="service.id">
+          <div class="detail-number">{{ service.number }} <span>— 03</span></div>
+          <div class="detail-main">
+            <app-eyebrow [label]="service.id === 'strategy' ? 'Find your direction' : service.id === 'experience' ? 'Shape the experience' : 'Build what matters'"></app-eyebrow>
+            <h2>{{ service.titleLead }} &amp;<br><em>{{ service.titleEmphasis }}.</em></h2>
+            <p class="lead">{{ service.summary }}</p>
+            <p>{{ service.description }}</p>
+            <div class="detail-tags">
+              @for (offering of service.offerings; track offering) {
+                <span>{{ offering }}</span>
+              }
+            </div>
+          </div>
+          <div class="detail-aside"><span class="aside-mark" aria-hidden="true">{{ service.number }}</span><p>{{ service.signoff }}</p></div>
+        </article>
+      }
+    </div>
+  </section>
+
+  <section class="approach-section section-wrap section-pad">
+    <app-section-heading eyebrow="The way we work">
+      <h2 heading-title>Small steps.<br><em>Real momentum.</em></h2>
+      <p heading-aside class="heading-aside">The right process leaves room for good thinking and keeps the work moving.</p>
+    </app-section-heading>
+    <div class="approach-grid">
+      @for (step of approach; track step.number) {
+        <article><span>{{ step.number }}</span><h3>{{ step.title }}</h3><p>{{ step.description }}</p></article>
+      }
+    </div>
+  </section>
+
+  <app-cta-band firstLine="Not sure where to start?" secondLine="That's a good place to begin."></app-cta-band>
+</main>

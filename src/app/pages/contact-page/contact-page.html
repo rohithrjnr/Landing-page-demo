@@ -1,0 +1,33 @@
+<main id="main">
+  <section class="page-hero contact-page-hero section-wrap">
+    <app-eyebrow label="04 / Get in touch"></app-eyebrow>
+    <div class="page-hero-grid"><h1>Good things<br>start with<br><em>a question.</em></h1><p class="page-hero-note">Tell us what's on your mind. We'll take it from there—no big pitch, just a good conversation.</p></div>
+    <div class="page-hero-band"><span>Curious? So are we.</span><span class="band-rule"></span><span>Let's talk.</span></div>
+  </section>
+
+  <section class="contact-content section-wrap section-pad">
+    <div class="contact-details">
+      <app-eyebrow label="Reach out"></app-eyebrow>
+      <h2>Tell us<br>what's <em>next.</em></h2>
+      <p>Share a little about what you're working on. We usually reply within two business days.</p>
+      <div class="contact-detail-block"><span class="detail-label">Email</span><a [href]="'mailto:' + email">{{ email }} <span aria-hidden="true">↗</span></a></div>
+      <div class="contact-detail-block"><span class="detail-label">Phone</span><a href="tel:+10000000000">+1 (000) 000-0000</a></div>
+      <div class="contact-detail-block"><span class="detail-label">Based in</span><p>Your city, your country<br><span class="muted">Working everywhere.</span></p></div>
+      <div class="contact-location"><span class="location-coordinate">LOCATION PLACEHOLDER</span><span class="location-cross" aria-hidden="true">+</span><span class="location-label">A PLACE TO WORK FROM<br>YOUR CITY · YOUR COUNTRY</span></div>
+    </div>
+
+    <div class="contact-form-wrap">
+      <app-eyebrow label="A note to Northline"></app-eyebrow>
+      <form class="contact-form" (submit)="prepareEmail($event)">
+        <div class="form-row">
+          <label for="name">Your name <span aria-hidden="true">*</span><input id="name" name="name" type="text" autocomplete="name" placeholder="Name" required></label>
+          <label for="email">Email address <span aria-hidden="true">*</span><input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></label>
+        </div>
+        <label for="company">Company <span class="optional">Optional</span><input id="company" name="company" type="text" autocomplete="organization" placeholder="Where you work"></label>
+        <label for="interest">What would you like to talk about?<select id="interest" name="interest"><option value="">Choose a starting point</option><option>Strategy &amp; direction</option><option>Brand &amp; experience</option><option>Digital &amp; delivery</option><option>Something else</option></select></label>
+        <label for="message">A little more about it <span aria-hidden="true">*</span><textarea id="message" name="message" rows="5" placeholder="The challenge, the opportunity, the half-formed idea…" required></textarea></label>
+        <div class="form-submit"><button class="button button-dark" type="submit">Prepare your message <span aria-hidden="true">↗</span></button><p>Your email app will open with your note ready to send.</p></div>
+      </form>
+    </div>
+  </section>
+</main>

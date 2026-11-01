@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" routerLink="/" aria-label="Northline home" (click)="closeMenu()">
+      <span class="wordmark-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>{{ siteName.toUpperCase() }}<span class="wordmark-period">.</span></span>
+    </a>
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-expanded]="menuOpen"
+      aria-controls="site-navigation"
+      (click)="toggleMenu()"
+    >
+      <span class="menu-toggle-label">Menu</span><span class="menu-toggle-icon" aria-hidden="true"></span>
+    </button>
+    <nav class="site-nav" id="site-navigation" aria-label="Main navigation" [class.is-open]="menuOpen">
+      <a routerLink="/" routerLinkActive="is-active" ariaCurrentWhenActive="page" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+      <a routerLink="/about" routerLinkActive="is-active" ariaCurrentWhenActive="page" (click)="closeMenu()">About us</a>
+      <a routerLink="/services" routerLinkActive="is-active" ariaCurrentWhenActive="page" (click)="closeMenu()">Services</a>
+      <a class="nav-contact" routerLink="/contact" routerLinkActive="is-active" ariaCurrentWhenActive="page" (click)="closeMenu()">Start a conversation <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
